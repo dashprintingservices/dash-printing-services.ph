@@ -18,8 +18,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/idProcessing', 'MainController@idProcessing')->name('id_processing');
 Route::get('/sales', 'MainController@sales')->name('sales');
 Route::get('/inventory', 'MainController@inventory')->name('inventory');
 Route::get('/clients', 'MainController@clients')->name('clients');
 Route::get('/reports', 'MainController@reports')->name('reports');
+Route::get('/users', 'MainController@users')->name('users');
+Route::get('/idProcessing', 'MainController@idProcessing')->name('id_processing');
+Route::post('/importExcel', 'MainController@importExcel');
